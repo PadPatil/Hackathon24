@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --accent-color: #e74c3c;
+  --success-color: #2ecc71;
+  --card-background: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1400px; 
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; 
+}
+
+.chatbot, .search-results, .related-topics {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.search-results form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-results input {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-results button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-results button:hover {
+  background-color: var(--secondary-color);
+}
+
+.description {
+  background-color: var(--card-background);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.description h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.related-topics ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.related-topics li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.related-topics li:hover {
+  background-color: #e0e0e0;
+}
+
+.error {
+  color: var(--accent-color);
+  background-color: #fde8e8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 1200px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .chatbot, .search-results, .related-topics {
+    max-width: 100%;
+  }
+}
